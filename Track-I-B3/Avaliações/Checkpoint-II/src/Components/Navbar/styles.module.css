@@ -1,0 +1,9 @@
+.odonto-icon {
+	width: 30px;
+	height: 30px;
+	padding: 4px;
+	background-color: var(--bs-purple);
+	color: white;
+	border-radius: 50px;
+	margin-right: 5px;
+}

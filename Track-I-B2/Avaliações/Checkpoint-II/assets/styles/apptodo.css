@@ -1,0 +1,571 @@
+/* Animação do skeleton */
+@keyframes transparencia {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* Raiz do documento */
+:root {
+  --gutter-x: 1.5rem;
+  --gutter-y: 0;
+  --fonte-poppins: 'Poppins', sans-serif;
+  --fonte-ubuntu: 'Ubuntu', sans-serif;
+  --cor-fonte: #333 !important;
+  --cor-fundo: #fff !important;
+  --cor-destaque: #5369f8 !important;
+  --cor-destaque-hover: #2743f5 !important;
+  --cor-background: #CBD2FD !important;
+  --cor-borda-input: #ccc !important;
+  --cor-texto-input: #333 !important;
+  --cor-sweetalert-border: #a7b3ff !important;
+}
+
+/* Regras globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Alteração do comportamento do scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Definição de fonte padrão para o corpo do site, cor padrão e fundo padrão */
+body {
+  font-family: var(--fonte-ubuntu);
+  color: var(--cor-fonte);
+  background-color: var(--cor-background);
+}
+
+/* Cor padrão dos links */
+a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+/* Cor padrão dos links: hover */
+a:hover {
+  color: var(--cor-destaque-hover);
+}
+
+/* Cor padrão dos links: focus */
+a:focus {
+  color: var(--cor-destaque-hover);
+}
+
+/* Ignora o padding para listas ordenadas e desordenadas */
+ol,
+ul {
+  padding-left: 0;
+}
+
+/* Efeito de transição para os breakpoints dos containers */
+.container {
+  transition: max-width .25s linear;
+}
+
+/* Centralização da área de login/cadastro do site */
+.centered-form {
+  padding: 50px 0;
+  height: 100vh;
+  align-items: center !important;
+  display: flex;
+}
+
+/* Definição da cor e fonte para textos em destaque */
+.text-theme {
+  font-family: var(--fonte-poppins);
+  color: var(--cor-destaque);
+}
+
+/* Estilo padrão para botões de login/cadastro do projeto */
+.btn-apptodo {
+  color: var(--cor-fundo);
+  background-color: var(--cor-destaque);
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: none;
+  padding: .375rem .75rem;
+  font-family: var(--fonte-poppins);
+  font-size: 1.2rem;
+  border-radius: .25rem;
+  transition: background-color .5s ease-in-out;
+}
+
+/* Efeito hover dos botões de login/cadastro do projeto */
+.btn-apptodo:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+/* Bloco de exibição das imagens de login, cadastro e erro */
+.splash-block {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 380px;
+  background-position: center;
+  height: 100%;
+}
+
+/* Imagem da página de erro */
+.splash-block.blocked {
+  background-image: url("../../assets/img/acesso_proibido.svg");
+}
+
+/* Imagem da página de login */
+.splash-block.login {
+  background-image: url("../../assets/img/login_form.svg");
+}
+
+/* Imagem da página de cadastro */
+.splash-block.signup {
+  background-image: url("../../assets/img/signup_form.svg");
+}
+
+/* Estilização de fundo dos cards de login, cadastro e erro */
+.card {
+  background-color: var(--cor-fundo);
+}
+
+/* Estilização de formulários */
+.form-control {
+  border: 3px solid var(--cor-borda-input);
+  background-color: var(--cor-fundo);
+  color: var(--cor-fonte);
+}
+
+/* Campos do formulário quando em foco */
+.form-control:focus {
+  color: var(--cor-fonte);
+  background-color: var(--cor-fundo);
+  border-color: var(--cor-destaque);
+  outline: 0;
+  box-shadow: none;
+}
+
+/* Barra de navegação */
+.navegacao-tarefas {
+  height: 70px;
+  display: flex;
+  padding: 0 1rem;
+  background-color: var(--cor-background);
+}
+
+/* Área de informações do usuário */
+.user-info {
+  margin-left: auto;
+}
+
+/* Imagem de perfil do usuário */
+.user-image {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  margin-left: .7em;
+  background: url("../../assets/img/profile_photo.png") center/contain no-repeat;
+}
+
+/* Botão para encerrar a sessão */
+.encerrar-sessao {
+  margin-left: 15px;
+  font-size: .8rem;
+  background-color: var(--bs-danger);
+  color: white;
+  border-radius: 50vh;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Área para criação de nova tarefa */
+.nova-tarefa {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-fundo);
+  width: 80%;
+  margin: 0 10%;
+  padding: 1.1rem;
+  border-radius: .5rem;
+  z-index: 20;
+}
+
+/* Campo de texto de nova tarefa */
+.nova-tarefa input[type=text] {
+  flex: 1;
+  border-radius: .5rem !important;
+  padding: .3em;
+  font-size: 1.1em;
+}
+
+/* Estilização do placeholder do campo de nova tarefa */
+.nova-tarefa input::placeholder {
+  color: var(--cor-texto-input);
+  text-indent: .2em;
+}
+
+/* Contador de caracteres do campo de nova tarefa */
+.contador {
+  color: var(--cor-fonte);
+  background-color: var(--cor-fundo);
+  border-radius: 0;
+  border: var(--cor-fundo);
+}
+
+/* Start: Skeleton para mascarar as tarefas enquanto são carregadas */
+#skeleton {
+  animation: transparencia 1s infinite;
+}
+
+#skeleton .tarefa .not-done {
+  position: relative;
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: var(--cor-fundo);
+  border: 2px solid var(--cor-fundo);
+  color: var(--cor-fundo);
+  z-index: 2;
+  transition: all 200ms linear;
+}
+
+#skeleton .descricao {
+  background-color: var(--cor-fundo);
+  color: var(--cor-borda-input);
+}
+
+#skeleton .fas.fa-check {
+  background-color: var(--cor-fundo) !important;
+  color: var(--cor-fundo) !important;
+}
+
+#skeleton button {
+  background-color: var(--cor-fundo) !important;
+  color: var(--cor-borda-input) !important;
+}
+
+#skeleton p {
+  background-color: var(--cor-borda-input);
+  color: var(--cor-borda-input);
+}
+
+/* End: Skeleton para mascarar as tarefas enquanto são carregadas */
+
+/* Start: Estilização de tarefas pendentes e concluídas */
+.tarefas-pendentes {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  list-style: none;
+  margin: 1.5rem 15%;
+}
+
+@media (min-width: 300px) {
+  .tarefas-pendentes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .tarefas-pendentes {
+    width: 90%;
+    margin: 1.5rem 5%;
+  }
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.tarefa .not-done {
+  position: relative;
+  height: 1.8rem;
+  width: 1.8rem;
+  background-color: var(--cor-fundo);
+  border: 2px solid var(--cor-destaque);
+  color: var(--cor-fundo);
+  z-index: 2;
+  transition: all 200ms linear;
+}
+
+.tarefa .not-done:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+.tarefa .descricao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  background-color: var(--cor-fundo);
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+}
+
+@media (max-width: 576px) {
+  .tarefa .descricao {
+    display: block;
+  }
+}
+
+.tarefa .nome {
+  color: var(--cor-texto);
+  text-align: justify;
+}
+
+.tarefa .timestamp {
+  font-size: .9em;
+  display: flex !important;
+  flex-direction: column;
+  white-space: nowrap;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .tarefa .timestamp {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: .2rem;
+    margin-top: 1rem;
+  }
+}
+
+.not-done,
+.done {
+  width: 2em;
+  height: 2em;
+  background-color: var(--cor-fundo);
+  margin-right: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.titulo-terminadas {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 1rem;
+  background-color: var(--cor-fundo);
+  border-radius: .25em;
+  color: var(--cor-destaque);
+  font-weight: 800;
+  font-size: 1.2rem;
+  z-index: 20;
+}
+
+@media (min-width: 992px) {
+  .titulo-terminadas {
+    width: 50%;
+  }
+}
+
+.tarefas-terminadas {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  list-style: none;
+  margin: 2em 15%;
+}
+
+@media (min-width: 300px) {
+  .tarefas-terminadas {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .tarefas-terminadas {
+    width: 90%;
+    margin: 1.5rem 0;
+  }
+}
+
+p.descricao-tarefa {
+  margin-bottom: 0;
+}
+
+.form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--cor-fundo);
+  border: 3px solid var(--cor-borda-input);
+  margin: auto .4rem;
+}
+
+.form-check-input:focus {
+  background-color: var(--cor-fundo);
+  border-color: var(--cor-borda-input);
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-check-input:checked {
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+}
+
+.btn-tarefas {
+  font-size: 1.2rem;
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  border-radius: .5rem;
+  transition: background-color .5s ease-in-out;
+}
+
+.btn-tarefas:hover {
+  background-color: var(--cor-destaque-hover);
+  color: var(--cor-fundo);
+}
+
+.btn-tarefas:focus {
+  box-shadow: none;
+}
+
+@media (min-width: 300px) {
+  .nova-tarefa {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .nova-tarefa {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* End: Estilização de tarefas pendentes e concluídas */
+
+/* Estilização: Modo Escuro automático */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fonte: lightgrey !important;
+    --cor-fundo: black !important;
+    --cor-texto-input: lightgrey !important;
+    --cor-background: #010525 !important;
+    --cor-borda-input: #2c2e41 !important;
+    --cor-sweetalert-border: #5369f8 !important;
+  }
+}
+
+/* Estilização do modal de participantes */
+.modal-github {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 0 .5rem;
+  font-size: 2rem;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+#container-modal {
+  background-color: var(--cor-background);
+}
+
+.participantes {
+  background-color: var(--cor-fundo);
+  color: var(--cor-fonte);
+}
+
+.btn-modal {
+  font-size: 1.5rem;
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  border-radius: .5rem;
+  transition: background-color .5s ease-in-out;
+  padding: .25rem .7rem;
+}
+
+.btn-modal:hover {
+  color: var(--cor-fundo);
+  background-color: var(--cor-destaque-hover);
+}
+
+.btn-modal:focus {
+  box-shadow: none;
+}
+
+/* Estilização da animação Spinner */
+
+.hidden {
+  display: none;
+ }
+  
+ #container-load {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+ }
+  
+ #load {
+  border: 10px solid var(--cor-destaque);
+  outline: 0;
+  border-top-color: var(--cor-destaque);
+  border-bottom-color: var(--cor-background);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  -webkit-animation: girar 1.5s linear infinite;
+  animation: girar 1.5s linear infinite;
+ }
+  
+ @-webkit-keyframes girar {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+ }
+  
+ @keyframes girar {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+ }
+
+ /* Estilização do alerta do Sweet Alert 2 */
+ .swal2-modal {
+   border: 5px solid var(--cor-sweetalert-border) !important;
+   border-radius: .5rem !important;
+ }
+
+ .swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+  background: var(--cor-background) !important;
+ }

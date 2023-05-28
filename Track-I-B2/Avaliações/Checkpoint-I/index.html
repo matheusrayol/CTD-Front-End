@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<!-- Start: Folhas de estilos -->
+	<!-- Folha de estilos do Bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<!-- Fonte Joystix -->
+	<link rel="stylesheet" href="assets/css/joystix.css">
+	<!-- Fonte Ubuntu -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<!-- Folha de estilos do projeto -->
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<!-- End: Folhas de estilos -->
+	<title>Game Geek</title>
+</head>
+
+<body>
+	<!-- Start: Cabeçalho do Site -->
+	<header id="cabecalho-site" class="sticky-top header-gamegeek">
+
+		<nav id="barra-navegacao" class="navbar navbar-dark navbar-expand-lg navegacao-gamegeek bg-dark">
+			<div class="container bg-transparent">
+				<a class="navbar-brand" href="index.html"><img src="assets/img/logo@2x.png" alt="Game Geek"></a>
+				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+                    <span class="visually-hidden">Navegação</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+				<div id="menu-navegacao" class="collapse navbar-collapse">
+					<ul class="navbar-nav me-auto fs-6">
+						<li class="nav-item">
+                            <a class="font-face-gamegeek nav-link active" href="#home">Home</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link font-face-gamegeek" href="#secao-jogos">Jogos</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link font-face-gamegeek" href="#secao-sobre">Sobre</a>
+                        </li>
+					</ul>
+                    <span class="navbar-text actions d-flex align-items-center">
+                        <a class="btn gamegeek-button font-face-gamegeek text-dark" role="button" data-bs-toggle="modal" data-bs-target="#modal-cadastro">Cadastrar Jogo</a>
+                    </span>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+	<!-- End: Cabeçalho do Site -->
+
+	<!-- Start: Seção Principal (Conteúdos) -->
+	<main id="conteudo-site" class="d-flex flex-column">
+
+		<!-- Start: Seção Hero Banner -->
+		<section class="d-flex align-items-center home-section" id="home">
+			<div class="container d-flex flex-column">
+				<div class="row row-cols-1">
+					<div class="text-center col">
+						<h1 class="font-face-gamegeek mb-5 gamegeek-text-effect">Aperte o play!</h1>
+                        <img class="hero-image" src="assets/img/gaming_hero.png" alt="Game Geek Hero Image">
+						<h4 class="text-white">A sua biblioteca de jogos agora é online.</h4>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- End: Seção Hero Banner -->
+
+		<!-- Start: Seção Cards Jogos -->
+		<section id="secao-jogos" class="d-flex pt-5 jogos-section pb-4">
+
+			<div class="container bg-transparent">
+
+				<div class="container bg-transparent">
+					<div class="row row-cols-1">
+						<div class="col text-center">
+							<h1 class="font-face-gamegeek gamegeek-text-effect text-black">Lista de jogos</h1>
+                        </div>
+					</div>
+				</div>
+
+				<div class="container pt-5 pb-5 bg-transparent">
+					<div id="lista-cards" class="row d-flex justify-content-center gy-4">
+
+						<div id="card" class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+							<div class="card bg-dark gamegeek-card border-0 h-100">
+                                <img class="card-img-top" src="assets/img/cyberpunk2077.jpg" alt="Cyberpunk 2077">
+								<div class="card-body d-flex flex-column">
+									<h4 class="card-title font-face-gamegeek text-white">Cyberpunk 2077</h4>
+									<h6 class="card-subtitle text-muted mb-2">PC, PlayStation, Xbox</h6>
+									<p class="card-text mb-auto text-white">Cyberpunk 2077 é um jogo eletrônico de RPG de ação desenvolvido e publicado pela CD Projekt Red. Lançado em 10 de dezembro de 2020 para Google Stadia, Microsoft Windows, PlayStation 4 e Xbox One, e previsto para 2021 para PlayStation 5 e Xbox Series X/S, sendo que nesses já está disponível via retrocompatibilidade.</p>
+								</div>
+								<div class="card-footer border-0 mb-2">
+                                </div>
+							</div>
+						</div>
+
+						<div id="card" class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+							<div class="card bg-dark gamegeek-card border-0 h-100">
+                                <img class="card-img-top" src="assets/img/doometernal.jpg" alt="DOOM Eternal">
+								<div class="card-body d-flex flex-column">
+									<h4 class="card-title font-face-gamegeek text-white">DOOM Eternal</h4>
+									<h6 class="card-subtitle text-muted mb-2">PC, PlayStation, Xbox, Nintendo Switch</h6>
+									<p class="card-text mb-auto text-white">Doom Eternal é um jogo eletrônico de tiro em primeira pessoa desenvolvido pela id Software e publicado pela Bethesda Softworks. Foi lançado em 20 de março de 2020 para Google Stadia, Microsoft Windows, PlayStation 4 e Xbox One e em 08 de dezembro de 2020 para Nintendo Switch.</p>
+								</div>
+								<div class="card-footer border-0 mb-2">
+                                </div>
+							</div>
+						</div>
+
+						<div id="card" class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+							<div class="card bg-dark gamegeek-card border-0 h-100">
+                                <img class="card-img-top" src="assets/img/eldenring.jpg" alt="Elden Ring">
+								<div class="card-body d-flex flex-column">
+									<h4 class="card-title font-face-gamegeek text-white">Elden Ring</h4>
+									<h6 class="card-subtitle text-muted mb-2">PC, PlayStation, Xbox</h6>
+									<p class="card-text mb-auto text-white">Elden Ring é um jogo eletrônico de RPG de ação desenvolvido pela FromSoftware e publicado pela Bandai Namco Entertainment. O jogo é um projeto colaborativo entre o diretor Hidetaka Miyazaki e o romancista de fantasia George R. R. Martin.</p>
+								</div>
+								<div class="card-footer border-0 mb-2">
+                                </div>
+							</div>
+						</div>
+
+						<div id="card" class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+							<div class="card bg-dark gamegeek-card border-0 h-100">
+                                <img class="card-img-top" src="assets/img/genshinimpact.jpg" alt="Genshin Impact">
+								<div class="card-body d-flex flex-column">
+									<h4 class="card-title font-face-gamegeek text-white">Genshin Impact</h4>
+									<h6 class="card-subtitle text-muted mb-2">PC, PlayStation, Android, iOS</h6>
+									<p class="card-text mb-auto text-white">Genshin Impact é um jogo eletrônico RPG de ação gratuito desenvolvido e publicado pela miHoYo. O jogo apresenta um ambiente de mundo aberto de fantasia e sistema de batalha baseado em ação.</p>
+								</div>
+								<div class="card-footer border-0 mb-2">
+                                </div>
+							</div>
+						</div>
+
+						<div id="card" class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+							<div class="card bg-dark gamegeek-card border-0 h-100">
+                                <img class="card-img-top" src="assets/img/leagueoflegends.jpg" alt="League of Legends">
+								<div class="card-body d-flex flex-column">
+									<h4 class="card-title font-face-gamegeek text-white">League of Legends</h4>
+									<h6 class="card-subtitle text-muted mb-2">PC, Mac</h6>
+									<p class="card-text mb-auto text-white">Cyberpunk 2077 é um jogo eletrônico de RPG de ação desenvolvido e publicado pela CD Projekt Red. Lançado em 10 de dezembro de 2020 para Google Stadia, Microsoft Windows, PlayStation 4 e Xbox One, e previsto para 2021 para PlayStation 5 e Xbox Series X/S, sendo que nesses já está disponível via retrocompatibilidade.</p>
+								</div>
+								<div class="card-footer border-0 mb-2">
+                                </div>
+							</div>
+						</div>
+
+						<div id="card" class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-xxl-4">
+							<div class="card bg-dark gamegeek-card border-0 h-100">
+                                <img class="card-img-top" src="assets/img/legendsarceus.jpg" alt="Pokémon Legends Arceus">
+								<div class="card-body d-flex flex-column">
+									<h4 class="card-title font-face-gamegeek text-white">Pokémon Legends: Arceus</h4>
+									<h6 class="card-subtitle text-muted mb-2">Nintendo Switch</h6>
+									<p class="card-text mb-auto text-white">Pokémon Legends: Arceus é um jogo eletrônico de RPG de ação desenvolvido pela Game Freak e publicado pela The Pokémon Company e Nintendo. Faz parte da oitava geração da série de jogos eletrônicos Pokémon e serve como uma prequela para os jogos eletrônicos de RPG do Nintendo DS, Pokémon Diamond e Pearl, de 2006.</p>
+								</div>
+								<div class="card-footer border-0 mb-2">
+                                </div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- End: Seção Cards Jogos -->
+
+		<!-- Start: Seção Sobre -->
+		<section id="secao-sobre" class="d-flex sobre-section bg-light">
+
+			<div class="container bg-light pt-5 pb-5">
+				<div class="gamegeek-text-effect font-face-gamegeek text-center pb-4 bg-light">
+					<h1>Sobre o projeto</h1> </div>
+				<div class="col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6 mx-auto">
+					<p class="lead sobre-justified">O Projeto Game Geek foi concebido para a entrega do Checkpoint I da disciplina de Front-End 2, do curso Certified Tech Developer da Digital House, ministrada pelo professor Marcos Vinnícius.</p>
+					<p class="sobre-justified">A entrega do Checkpoint I consiste em um site que contenha cards de um tema selecionado pelo grupo, onde é possível <em>adicionar ou remover cards e seus conteúdos</em> através da <em>manipulação de elementos DOM</em> utilizando o <strong>JavaScript </strong>e <strong>conceitos adquiridos em aula</strong>. Os membros participantes estão listados no rodapé deste projeto.</p>
+				</div>
+			</div>
+		</section>
+		<!-- End: Seção Sobre -->
+
+	</main>
+	<!-- End: Seção Principal (Conteúdos) -->
+
+	<!-- Start: Rodapé do Site -->
+	<footer id="rodape" class="bg-dark pt-5 pb-5">
+
+		<div class="container bg-dark">
+			<div class="row justify-content-center align-items-center">
+
+				<div id="desenvolvedores-0" class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 text-center text-sm-center text-md-start text-lg-start text-xl-start text-xxl-start d-flex flex-column align-items-center align-items-sm-center align-items-md-start align-items-lg-start align-items-xl-start align-items-xxl-start">
+					<h3 class="font-face-gamegeek gamegeek-text-effect text-black">Maria Bonifácio</h3>
+					<div class="d-flex mt-3 pb-5">
+						<a href="https://www.linkedin.com/in/maria-bonif%C3%A1cio-2aa96b218/">
+                            <i class="fab fa-linkedin-in redes-sociais text-white"></i>
+                        </a>
+						<a href="https://github.com/Mariaboni">
+                            <i class="fab fa-github redes-sociais text-white"></i>
+                        </a>
+						<a href="https://twitter.com/kawinskaw">
+                            <i class="fab fa-twitter redes-sociais text-white"></i>
+                        </a>
+					</div>
+				</div>
+
+				<div id="desenvolvedores-1" class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 text-center text-sm-center text-md-end text-lg-center text-xl-center text-xxl-center d-flex flex-column align-items-center align-items-sm-center align-items-md-end align-items-lg-center align-items-xl-center align-items-xxl-center">
+					<h3 class="font-face-gamegeek gamegeek-text-effect text-black">Matheus Rayol</h3>
+					<div class="d-flex mt-3 pb-5">
+                        <a href="https://linkedin.com/in/matheusrayol">
+                            <i class="fab fa-linkedin-in redes-sociais text-white"></i>
+                        </a>
+						<a href="https://github.com/matheusrayol">
+                            <i class="fab fa-github redes-sociais text-white"></i>
+                        </a>
+                        <a href="https://twitter.com/naosematty">
+                            <i class="fab fa-twitter redes-sociais text-white"></i>
+                        </a>
+					</div>
+				</div>
+
+				<div id="desenvolvedores-2" class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 text-center text-sm-center text-md-center text-lg-end text-xl-end text-xxl-end d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-end align-items-xl-end align-items-xxl-end">
+					<h3 class="font-face-gamegeek gamegeek-text-effect text-black">Tiago Vale</h3>
+					<div class="d-flex mt-3 pb-5">
+                        <a href="https://www.linkedin.com/in/tiago-pereira-do-vale">
+                            <i class="fab fa-linkedin-in redes-sociais text-white"></i>
+                        </a>
+						<a href="https://github.com/tpvale">
+                            <i class="fab fa-github redes-sociais text-white"></i>
+                        </a>
+						<a href="https://twitter.com/tpvaale">
+                            <i class="fab fa-twitter redes-sociais text-white"></i>
+                        </a>
+					</div>
+				</div>
+
+			</div>
+			<div>
+				<p class="text-muted text-center">&copy; 2022 - Game Geek - <a class="text-muted text-decoration-none" href='https://br.freepik.com/fotos-vetores-gratis/social'>Social psd criado por Kerfin7 - br.freepik.com</a></p>
+			</div>
+		</div>
+	</footer>
+	<!-- End: Rodapé do Site -->
+
+	<!-- Start: Modal Cadastro -->
+	<div class="modal fade" id="modal-cadastro" tabindex="-1" aria-labelledby="modal-signuplabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+			<div class="modal-content">
+				<div class="modal-header bg-dark"> 
+                    <img src="assets/img/logo.png" alt="Game Geek">
+                    <span class="font-face-gamegeek text-white ms-5">Cadastro de jogo</span>
+					<button id="toggleMyModal" type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="mb-3">
+                            <label for="inJogo" class="form-label">Nome do Jogo</label>
+							<input type="text" class="form-control" id="inJogo">
+                        </div>
+						<div class="mb-3">
+                            <label for="inPlataforma" class="form-label">Plataformas Suportadas</label>
+                            <input type="text" class="form-control" id="inPlataforma">
+                        </div>
+						<div class="mb-3">
+							<label for="inImagem" class="form-label">URL da Imagem</label>
+                            <input type="text" class="form-control" id="inImagem">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inDescricao" class="form-label">Descrição</label>
+                            <textarea class="form-control" id="inDescricao" rows="5"></textarea>
+                        </div>
+						<div class="mb-3">
+							<button class="btn gamegeek-button font-face-gamegeek text-white bg-dark me-3" type="submit" id="btAdicionar">Cadastrar</button>
+                            <button class="btn gamegeek-button font-face-gamegeek text-white bg-dark" type="reset" id="btAdicionar">Limpar</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer justify-content-between bg-dark pb-5">
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- End: Modal Cadastro -->
+
+	<!-- Start: Scripts-->
+	<!-- Script Bootstrap 5 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!-- Script Checkpoint I -->
+	<script src="assets/scripts/checkpoint.js"></script>
+	<!-- End: Scripts -->
+</body>
+
+</html>

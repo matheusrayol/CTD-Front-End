@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.light-theme {
+	background-color: #fffffe;
+	color: #16161a;
+}
+
+.dark-theme {
+	background-color: #16161a;
+	border-color: #7f5af0;
+	color: #fffffe;
+}
+
+input, select {
+	border: 3px solid;
+}
+
+input.dark-theme, input.dark-theme:focus {
+	border-color: #242629;
+	background-color: #16161a;
+	color: #fffffe;
+}
+
+input.dark-theme:focus, input.light-theme.focus {
+	border-color: #7f5af0;
+	box-shadow: 0 0 0 0.2rem rgba(127, 90, 240, 0.25);
+}
+
+.btn-dhodonto, .btn-dhodonto:visited, .btn-dhodonto:active {
+	background-color: #7f5af0 !important;
+	color: #fffffe !important;
+	border: 3px solid #4a13f0 !important;
+	border-radius: 5px !important;
+}
+
+.btn-dhodonto:hover {
+	background-color: #4a13f0 !important;
+}
+
+.card-dark {
+	background-color: #242629;
+	color: #fffffe;
+}
+
+.card-light {
+	background-color: #fffffe;
+	color: #242629;
+}
+
+a {
+	text-decoration: none;
+	color: #7f5af0;
+}
+
+a:hover {
+	color: #4a13f0;
+}
+
+.form-check-input:checked {
+    background-color: blueviolet;
+    border-color: rgb(203, 173, 231);
+}
+
+.form-switch .form-check-input {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='blueviolet'/%3e%3c/svg%3e");
+  border-color: blueviolet;
+}
+.form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgb(203, 173, 231)'/%3e%3c/svg%3e");
+  box-shadow: none;
+  border-color: blueviolet;
+}

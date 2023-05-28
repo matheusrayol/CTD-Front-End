@@ -1,0 +1,27 @@
+.top {
+	border: 1px solid #16161a;
+	background-color: #7f5af0;
+	color: white;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	border-radius: 50px;
+	text-align: center;
+}
+
+.dhLogo {
+	width: 300px;
+	max-width: 100%;
+}
+
+.dhLogo.dark {
+	filter:invert(100%);
+}
+
+.icon {
+	width: 1.5rem;
+	max-width: 2rem;
+	height: auto;
+}

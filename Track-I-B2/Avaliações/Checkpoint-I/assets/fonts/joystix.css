@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Joystix';
+    src: url('joystix_monospace.woff2') format('woff2'),
+         url('joystix_monospace.woff') format('woff'),
+         url('joystix_monospace.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
