@@ -1,9 +1,17 @@
-.card-personagem {
+.card-character {
   display: flex;
   flex-direction: column;
+  position: relative;
+  transition: all .4s ease-in;
+  
 }
 
-.card-personagem > img {
+.card-character:hover {
+  box-shadow: 0 0 2px rgba(0,0,0,.5);
+  border-radius: 5px;
+}
+
+.card-character > img {
   width: 300px;
   height: 300px;
   border-top-left-radius: 5px;
@@ -11,7 +19,13 @@
   border: 1px solid #d0d0d0;
 }
 
-.card-personagem > div.card-personagem-body {
+.card-character div.character-bookmark {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+
+.card-character > div.card-character-body {
   padding: 10px;
   border: 1px solid #d0d0d0;
   border-top: 0;
@@ -22,4 +36,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+span.truncate-text {
+  width: 100%;
+  -webkit-line-clamp: 1;
+  text-overflow: clip;
 }

@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
-import "./cabecalho.css";
+import "./header.css";
 
 /**
  * Cabeçalho que contém os links para navegar entre as páginas
  *
- * Uso: `<Cabecalho />`
+ * Uso: `<Header />`
  *
- * @returns {JSX.Element}
+ * @returns Elemento JSX
  */
-const Cabecalho = () => {
+const Header = () => {
   return (
     <header>
       <div>
         <div>
-          <h2>Exame Final de Frontend IV</h2>
+          <h2>Checkpoint II - Front-End</h2>
         </div>
         <nav>
           <ul>
@@ -23,9 +23,6 @@ const Cabecalho = () => {
             <li>
               <Link to="/favoritos">Favoritos</Link>
             </li>
-            <li>
-              <Link to="/detalhe">Detalhe</Link>
-            </li>
           </ul>
         </nav>
       </div>
@@ -33,4 +30,4 @@ const Cabecalho = () => {
   );
 };
 
-export default Cabecalho;
+export default Header;

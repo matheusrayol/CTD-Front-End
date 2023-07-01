@@ -1,0 +1,22 @@
+.filters {
+  display: flex;
+  margin: 20px auto;
+  align-items: center;
+  gap: 1rem;
+  width: max-content;
+}
+
+.filters label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.filters input[type="text"]{ 
+  padding: 15px 20px; 
+  border-radius: 3px;
+  width: 400px;
+  font-size: 1rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
+}

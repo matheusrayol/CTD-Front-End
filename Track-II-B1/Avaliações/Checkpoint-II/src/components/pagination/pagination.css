@@ -1,0 +1,22 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+button.pagination {
+  width: 50px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgba(99, 123, 255, 0.907);
+  color: white;
+}
+
+
+button.pagination[disabled] {
+  background-color: rgb(94, 97, 99);
+}

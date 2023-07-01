@@ -1,25 +1,13 @@
-import {combineReducers} from "@reduxjs/toolkit";
-import { composeWithDevTools } from 'redux-devtools-extension';
-
-// Importamos applyMiddleware do Redux, para poder adicionar Thunk ou Saga como Middleware
-import { legacy_createStore as createStore, applyMiddleware } from 'redux';
-import {TypedUseSelectorHook, useSelector as useReduxSelector} from "react-redux";
-
-// Importamos o thunk de redux-thunk
+import { legacy_createStore as createStore, compose, applyMiddleware } from 'redux';
+import reducers from './reducers/index';
 import thunk from 'redux-thunk';
 
+// @ts-ignore
+const composeEnhancers = (window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__) || compose;
 
-const rootReducer = combineReducers({
+const store = createStore(
+  reducers,
+  composeEnhancers(applyMiddleware(thunk)));
 
-});
 
-export type IRootState = ReturnType<typeof rootReducer>;
-
-// Tipamos o hook useSelector
-export const useSelector: TypedUseSelectorHook<IRootState> = useReduxSelector
-
-export const store = createStore(
-    rootReducer, composeWithDevTools(applyMiddleware(thunk))
-)
-
-export default store
+export default store;

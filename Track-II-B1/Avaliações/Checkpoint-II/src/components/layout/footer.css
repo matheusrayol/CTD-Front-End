@@ -1,0 +1,12 @@
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: bottom;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    z-index: 999;
+}
