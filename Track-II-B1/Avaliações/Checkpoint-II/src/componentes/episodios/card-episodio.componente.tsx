@@ -1,3 +1,4 @@
+import { Episodio } from "../../redux/types/personagemTypes";
 import "./card-episodio.css";
 
 /**
@@ -5,16 +6,20 @@ import "./card-episodio.css";
  *
  * Você precisará adicionar as propriedades necessárias para exibir os dados dos episódios
  *
- *
  * @returns Elemento JSX
  */
-const CardEpisodio = () => {
+
+type CardEpisodioProps = {
+  episodio: Episodio
+}
+
+const CardEpisodio = ({ episodio }: CardEpisodioProps) => {
   return (
     <div className="card-episodio">
-      <h4>Close Rick-counters of the Rick Kind</h4>
+      <h4>{episodio.name}</h4>
       <div>
-        <span>S01E01</span>
-        <span>Lançado em: April 7, 2014</span>
+        <span>{episodio.episode}</span>
+        <span>{episodio.air_date}</span>
       </div>
     </div>
   );

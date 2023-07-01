@@ -6,7 +6,7 @@ import PaginaFavoritos from "./paginas/Favoritos.pagina";
 import PaginaDetalhe from "./paginas/Detalhe.pagina";
 import Cabecalho from "./componentes/layout/cabecalho.componente";
 import { Provider } from "react-redux";
-import { store } from "./redux/store";
+import store from "./redux/store";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PaginaInicio />} />
           <Route path="favoritos" element={<PaginaFavoritos />} />
-          <Route path="detalhe" element={<PaginaDetalhe />} />
+          <Route path=":id" element={<PaginaDetalhe />} />
         </Routes>
       </Provider>
     </div>
